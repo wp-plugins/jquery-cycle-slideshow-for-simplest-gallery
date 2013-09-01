@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: jQuery Cycle Slideshow for Simplest Gallery
-Version: 1.0
-Plugin URI: http://www.sitiweb-bologna.com/risorse/wordpress-simplest-gallery-plugin/
+Version: 1.1
+Plugin URI: http://www.simplestgallery.com/add-ons/lightview-gallery-style-plugin/
 Description: Display your Wordpress galleries as a jQuery Slideshow. Requires the "Simplest Gallery" plugin (adds a new gallery style to it).
 Author: Cristiano Leoni, JJ Coder
 Author URI: http://www.linkedin.com/pub/cristiano-leoni/2/b53/34
@@ -14,6 +14,7 @@ Author URI: http://www.linkedin.com/pub/cristiano-leoni/2/b53/34
 /*
 
     History
+   + 1.1 2013-08-28	Bug fixes for compatibility issues with WP 3.6
    + 1.0 2013-04-29	First working version
 */
 
@@ -37,8 +38,9 @@ function sgac_init() {
 						'sgac_render',		/* Function to be called for the gallery rendering */
 						'sgac_header',		/* Function to be called on header() */
 						array(			/* Array of scripts to be included, possibly empty */
-							'jquery-jjcucle'=>array($urlpath . '/script/jquery.cycle.lite.1.0.min.js', array('jquery'), ''),
-							'jquery-shuffle'=>array($urlpath . '/script/jquery.jj_ngg_shuffle.js', array('jquery'), ''),
+							'jquery'=>array('http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', false, '1.10.1'),
+							'jquery-jjcycle'=>array($urlpath . '/script/jquery.cycle.lite.1.0.min.js', array('jquery'), ''),
+							// 'jquery-shuffle'=>array($urlpath . '/script/jquery.jj_ngg_shuffle.js', array('jquery'), ''), // Will be activated later
 						      ),
 						array()			/* Array of CSS to be included, possibly empty */
 					);
@@ -54,8 +56,13 @@ function sgac_header() {
 // First parameter is an array of images data (images of the gallery to be rendered), second parameter is an array of thumbs data (unused here)
 // data here means that each image/thumb is represented by an array. Each position holds a specific thing:
 // 0=URL,1=width,2=height,3=unused,4=ID,5=Label
-function sgac_render($images,$thumbs) {
+function sgac_render($images,$thumbs,$post_id=NULL,$gall_id=NULL) {
     $p_size=600;
+    if ($post_id) {
+	    $width=get_post_meta($post_id, 'gall_width', true);
+	    $height=get_post_meta($post_id, 'gall_height', true);
+    }
+    
     $html_id='cycle_lite';
     
     $output = '';
@@ -142,11 +149,11 @@ function sgac_render($images,$thumbs) {
     // Add javascript
     $output .= "\n<script type=\"text/javascript\">";
     // Shuffle results on random order so even if page is cached the order will be different each time
-    if($order == 'random' && $shuffle == 'true')
+    if(FALSE && $order == 'random' && $shuffle == 'true')
     {
-      $output .= "\n  jQuery('div#" . $html_id . "').jj_ngg_shuffle();";
+      $output .= "\n  jQuery('#" . $html_id . "').jj_ngg_shuffle();";
     }
-    $output .= "\n  jQuery('div#" . $html_id . "').jjcycle(";
+    $output .= "\n  jQuery('#" . $html_id . "').jjcycle(";
     if(count($javascript_args) > 0)
     {
       $output .= "{" . implode(",", $javascript_args) . "}";
