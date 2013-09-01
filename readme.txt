@@ -31,16 +31,17 @@ Requires Simplest Gallery plugin v. 2.3 to work.
 3. View any page with a gallery and enjoy
 
 For best results, resize images to the same size before using them in a gallery.
-For more tips and help/support, check out the plugin's web page: [Plugin page](http://www.simplestgallery.com/add-ons/lightview-gallery-style-plugin/ "jQuery Cycle Slideshow plugin page")
+For more tips and help/support, check out the plugin's web page: [Plugin page](http://www.simplestgallery.com/add-ons/jquery-cycle-slideshow-gallery-style-plugin/ "jQuery Cycle Slideshow plugin page")
 
 
 == See it in action ==
 
-[Our test site](http://www.simplestgallery.com/add-ons/lightview-gallery-style-plugin/ "Our test site")
+[Our test site](http://www.simplestgallery.com/add-ons/jquery-cycle-slideshow-gallery-style-plugin/ "Our test site")
 
 
 
 == Changelog ==
 
+* 1.2 2013-09-01	Bug fix
 * 1.1 2013-09-01	Bug fixes for compatibility issues with WP 3.6. Designed to work with Simplest Gallery plugin 2.3 or higher
 * 1.0 2013-04-29	First working version

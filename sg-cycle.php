@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: jQuery Cycle Slideshow for Simplest Gallery
-Version: 1.1
-Plugin URI: http://www.simplestgallery.com/add-ons/lightview-gallery-style-plugin/
+Version: 1.2
+Plugin URI: http://www.simplestgallery.com/add-ons/jquery-cycle-slideshow-gallery-style-plugin/
 Description: Display your Wordpress galleries as a jQuery Slideshow. Requires the "Simplest Gallery" plugin (adds a new gallery style to it).
 Author: Cristiano Leoni, JJ Coder
 Author URI: http://www.linkedin.com/pub/cristiano-leoni/2/b53/34
@@ -14,7 +14,8 @@ Author URI: http://www.linkedin.com/pub/cristiano-leoni/2/b53/34
 /*
 
     History
-   + 1.1 2013-08-28	Bug fixes for compatibility issues with WP 3.6
+   + 1.2 2013-09-01	Bug fix
+   + 1.1 2013-09-01	Bug fixes for compatibility issues with WP 3.6
    + 1.0 2013-04-29	First working version
 */
 
