@@ -11,13 +11,14 @@ License URI: http://en.wikipedia.org/wiki/MIT_License
 Display your Wordpress galleries as a jQuery Slideshow. Requires the "Simplest Gallery" plugin (adds a new gallery style to it).
 
 
-
 == Description ==
 
 
 This plugin adds a new style to the simplest gallery plugin: your galleries will be displayed as nice on-page jQuery slideshows.
 
-Requires Simplest Gallery plugin v. 2.3 to work.
+Size of the slideshow is customizable by using the Simplest Gallery box in post/page edit screen.
+
+Requires Simplest Gallery plugin v. 2.4 or later to work.
 
 
 
@@ -42,6 +43,7 @@ For more tips and help/support, check out the plugin's web page: [Plugin page](h
 
 == Changelog ==
 
+* 1.3 2013-09-12	Fixed rare bug in startup. Slideshow size is now customizable. Support for multiple galleries in the same page (with Simplest Gallery version 2.5 or higher)
 * 1.2 2013-09-01	Bug fix
 * 1.1 2013-09-01	Bug fixes for compatibility issues with WP 3.6. Designed to work with Simplest Gallery plugin 2.3 or higher
 * 1.0 2013-04-29	First working version
