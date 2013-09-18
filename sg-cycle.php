@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: jQuery Cycle Slideshow for Simplest Gallery
-Version: 1.3
+Version: 1.4
 Plugin URI: http://www.simplestgallery.com/add-ons/jquery-cycle-slideshow-gallery-style-plugin/
 Description: Display your Wordpress galleries as a jQuery Slideshow. Requires the "Simplest Gallery" plugin (adds a new gallery style to it).
 Author: Cristiano Leoni, JJ Coder
@@ -14,6 +14,7 @@ Author URI: http://www.linkedin.com/pub/cristiano-leoni/2/b53/34
 /*
 
     History
+   + 1.4 2013-09-18	Fix on jQuery library version (gallery did not work on some themes)
    + 1.3 2013-09-12	Fixed rare bug in startup. Support for multiple galleries in the same page (with Simplest Gallery version 2.5 or higher)
    + 1.2 2013-09-01	Bug fix
    + 1.1 2013-09-01	Bug fixes for compatibility issues with WP 3.6
@@ -41,7 +42,7 @@ function sgac_init() {
 							'sgac_render',		/* Function to be called for the gallery rendering */
 							'sgac_header',		/* Function to be called on header() */
 							array(			/* Array of scripts to be included, possibly empty */
-								'jquery'=>array('http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', false, '1.10.1'),
+								'jquery'=>array('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3'),
 								'jquery-jjcycle'=>array($urlpath . '/script/jquery.cycle.lite.1.0.min.js', array('jquery'), ''),
 								// 'jquery-shuffle'=>array($urlpath . '/script/jquery.jj_ngg_shuffle.js', array('jquery'), ''), // Will be activated later
 							      ),
