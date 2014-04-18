@@ -3,7 +3,7 @@
 Contributors: cleoni
 Tags: simplest, gallery, simple, slideshow, jquery, cycle
 Requires at least: 3.5.0
-Tested up to: 3.5.1
+Tested up to: 3.9
 Stable tag: trunk
 License: MIT License
 License URI: http://en.wikipedia.org/wiki/MIT_License
