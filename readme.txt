@@ -3,7 +3,7 @@
 Contributors: cleoni
 Tags: simplest, gallery, simple, slideshow, jquery, cycle
 Requires at least: 3.5.0
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: trunk
 License: MIT License
 License URI: http://en.wikipedia.org/wiki/MIT_License
@@ -18,7 +18,7 @@ This plugin adds a new style to the simplest gallery plugin: your galleries will
 
 Size of the slideshow is customizable by using the Simplest Gallery box in post/page edit screen.
 
-Requires Simplest Gallery plugin v. 2.5 or later to work.
+Requires the "Simplest Gallery" plugin to work
 
 
 
